@@ -71,3 +71,8 @@ footer a:hover {
 footer {
     margin-bottom: 40px;
 }
+
+.logo-footer {
+    height: 22px;
+    margin: 140px 0;
+}
