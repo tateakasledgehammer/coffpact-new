@@ -76,3 +76,123 @@ footer {
     height: 22px;
     margin: 0;
 }
+
+/* ========================= */
+/* RESPONSIVE: TABLET (up to 1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+    /* Navbar */
+    #navbar a {
+        padding: 25px 15px;
+        font-size: 15px;
+    }
+    #navbar {
+        margin-top: 20px;
+    }
+
+    /* Hero */
+    .hero-light {
+        width: 70%;
+        height: auto;
+        margin: 100px auto 60px auto;
+        display: block;
+    }
+    #hero input {
+        width: 40%;
+    }
+    #hero h3 {
+        padding-top: 100px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Concept */
+    #display {
+        margin: 160px 0;
+    }
+    .coffpact-concept {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Footer */
+    footer small {
+        font-size: 14px;
+        padding: 50px 20px;
+        text-align: center;
+        display: block;
+    }
+    footer a {
+        font-size: 14px;
+        padding: 6px 10px;
+        justify-content: center;
+    }
+    footer {
+        margin-bottom: 30px;
+    }
+    .logo-footer {
+        height: 18px;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE: MOBILE (up to 600px) */
+/* ========================= */
+@media (max-width: 600px) {
+    /* Navbar */
+    #navbar a {
+        padding: 12px 8px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    #navbar {
+        margin-top: 15px;
+    }
+
+    /* Hero */
+    .hero-light {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        margin: 60px auto 40px auto;
+        display: block;
+    }
+    #hero input {
+        width: 80%;
+    }
+    #hero h3 {
+        padding-top: 60px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Concept */
+    #display {
+        margin: 100px 0;
+    }
+    .coffpact-concept {
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Footer */
+    footer small {
+        font-size: 12px;
+        padding: 30px 15px;
+        text-align: center;
+        display: block;
+    }
+    footer a {
+        font-size: 12px;
+        padding: 4px 8px;
+        justify-content: center;
+    }
+    footer {
+        margin-bottom: 20px;
+    }
+    .logo-footer {
+        height: 14px;
+    }
+}
