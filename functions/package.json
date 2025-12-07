@@ -1,26 +1,12 @@
 {
-  "name": "coffpact-new",
-  "version": "1.0.0",
-  "main": "coffpact-new.js",
+  "name": "functions",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tateakasledgehammer/coffpact-new.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tateakasledgehammer/coffpact-new/issues"
-  },
-  "homepage": "https://github.com/tateakasledgehammer/coffpact-new#readme",
-  "description": "",
   "dependencies": {
-    "firebase": "^12.6.0",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^4.7.0",
+    "nodemailer": "^7.0.11"
   }
-  
 }
