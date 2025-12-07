@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+
+    <title>coffpact</title>
+    <script type="module" src="firebase.js"></script>
+</head>
+
+<body>
+
+    <div id="hero" style="text-align: center;">
+        <img class="hero-light" src="coffpact-logo-narrow.png">
+
+        <h1>coffee carrying made easy</h1>
+        <h2>$30</2>
+        <h3>register your interest here</h3>
+
+        <div id="signUpMessage" class="messageDiv" style="display:none"></div>
+
+        <form id="signUpForm">
+            <input type="email" id="email" placeholder="Email address">
+            <input type="text" id="firstName" placeholder="First name">
+            <input type="text" id="lastName" placeholder="Last name">
+            <button id="submitSignUp" type="submit">Join waitlist</button>
+        </form>
+        
+        <p>
+            we don't exist yet :(. by providing your email, you join our mail list for updates as 
+            <strong>coffpact</strong> becomes a reality</p>
+
+        <!--
+        <p>you can also donate to our gofundme <a href="#">here</a></p>
+        -->
+        
+    </div>
+
+    <div id="display" style="text-align: center;">
+        <h2>learn about us</h2>
+        <img class="coffpact-concept" src="coffpact-concept copy.png">
+    </div>
+
+    <footer style="text-align: center;">
+        <p>hello@coffpact.com.au</p>
+        <p>www.coffpact.com</p>
+        <img class="logo-footer" src="c-only-logo-sized.png">
+    </footer>
+</body>
+</html>
