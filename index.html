@@ -15,7 +15,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 
     <title>coffpact</title>
+    <script type="module" src="firebaseauth.js"></script>
 </head>
+
 <body>
     <div id="navbar">
         <!-- 
@@ -29,9 +31,14 @@
         <img class="hero-light" src="coffpact-logo-narrow.png">
         <!--<img class="hero-dark" src="coffpact with tick-white copy.png">-->
         <h1>coffee carrying made easy</h1>
-        <h2>$20</2>
+        <h2>$30</2>
         <h3>register your interest here</h3>
-        <input placeholder="Enter your email address">
+
+        <div id="signUpMessage" class="messageDiv" style="display:none"></div>
+
+        <input id="email" placeholder="Enter your email address">
+        <input type="text" id="firstName" placeholder="Enter your first name">
+        <input type="text" id="lastName" placeholder="Enter your last name">
         <button>Submit</button>
         <p>we don't exist yet :(. by providing your email, you join our mail list for updates as <strong>coffpact</strong> becomes a reality</p>
         <!--
