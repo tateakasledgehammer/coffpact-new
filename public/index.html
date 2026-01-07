@@ -26,16 +26,37 @@
         <h1>coffee carrying made easy</h1>
         <h2>$30</2>
         <h3>register your interest here</h3>
-
-        <div id="signUpMessage" class="messageDiv" style="display:none"></div>
-
-        <form id="signUpForm">
-            <input type="email" id="email" placeholder="Email address">
-            <input type="text" id="firstName" placeholder="First name">
-            <input type="text" id="lastName" placeholder="Last name">
-            <button id="submitSignUp" type="submit">Join waitlist</button>
-        </form>
         
+        <section id="email-signup">
+            <form id="signup-form">
+                <input 
+                    type="email" 
+                    id="email-input" 
+                    placeholder="Email address"
+                    aria-label="Email address"
+                />
+                
+                <!--
+                    <input 
+                        type="text" 
+                        id="first-name-input" 
+                        placeholder="First name"
+                        aria-label="First name"
+                    />
+                    <input 
+                        type="text" 
+                        id="last-name-input" 
+                        placeholder="Last name"
+                        aria-label="Last name"
+                    />
+                --> 
+                <button type="submit">Join waitlist</button>
+            </form>
+            
+            <p id="message" role="alert" style="display: none;"></p>
+
+        </section>
+
         <p>
             we don't exist yet :(. by providing your email, you join our mail list for updates as 
             <strong>coffpact</strong> becomes a reality</p>
@@ -56,5 +77,51 @@
         <p>www.coffpact.com</p>
         <img class="logo-footer" src="c-only-logo-sized.png">
     </footer>
+
+    <script>
+        const form = document.getElementById("signup-form");
+        const emailInput = document.getElementById("email-input");
+        const firstNameInput = document.getElementById("first-name-input");
+        const lastNameInput = document.getElementById("last-name-input");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            message.style.dispaly = "none";
+            message.textContent = "";
+            
+            const email = emailInput.value.trim();
+            if (!email) {
+                message.style.color = "red";
+                message.textContent = "Please enter valid email address.";
+                message.style.display = "block";
+            }
+
+            try {
+                const response = await fetch("/.netlify/functions/subscribe", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ email }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    message.style.color = "black";
+                    message.textContent = "Thanks for joining the waitlist. We'll keep you posted!"
+                    form.reset()
+                } else {
+                    throw new Error(result.error || "Something went wrong.");
+                } 
+            } catch (error) {
+                message.style.color = "red";
+                message.textContent = error.message;
+            }
+
+            message.style.display = "block";
+        })
+    </script>
 </body>
 </html>
