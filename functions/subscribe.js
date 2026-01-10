@@ -61,7 +61,7 @@ exports.handler = async function (event, context) {
             body: JSON.stringify({ message: "Subscribed successfully" }),
         };
     } catch (error) {
-        console.error("Firestone error:", err);
+        console.error("Firestone error:", error);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: "Failed to save subscriber "})
